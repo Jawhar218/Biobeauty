@@ -1,0 +1,1118 @@
+<html>
+    <head>
+         <link rel="stylesheet" href="styles/index.processed.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> 
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+	    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+        
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script>
+            
+        $(document).ready(function(){
+    $(window).scroll(function(){
+        if($(window).scrollTop() > 100){
+            $(".navbar").css({"background-color":"black"});   
+        }
+        else{
+            $(".navbar").css({"background-color":""});
+        }
+
+    });
+});
+        </script>
+       <style>
+           body{
+               background-color: #EEF2F4 !important;
+           }
+           
+           
+           
+           
+           /* navbar */
+           
+           .navbar-brand{
+               position: relative;
+               left :20%;
+           }
+           .navbar-nav{
+               position: relative;
+               left:35%;
+           }
+           .nav-item{
+               padding-left: 10%;
+               color: #354E57;
+           }
+           .nav-link{
+               font-family: Proxima Nova;
+               font-size: 22px;
+             color: #354E57;  
+           }
+         
+.nav-link:hover{
+    color: darkgreen;
+    border: none;
+    
+    animation: rotate 0.7s ease-in-out both;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+.nav-link:before,
+.nav-link:after{
+    
+    background: #fff;
+    width: 100px;
+    height: 100px;
+    
+    opacity: 0;
+    transform: translate(100%, -25%) translate3d(0, 0, 0);
+    position: relative;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: all 0.15s cubic-bezier(0.02, 0.01, 0.47, 1);
+}
+.nav-link:hover:before,
+.nav-link:hover:after{
+    opacity: 0.15;
+}
+.nav-link:hover:before{ transform: translate3d(50%, 0, 0) scale(0.9); }
+.nav-link:hover:after{ transform: translate(50%, 0) scale(1.1); }
+@keyframes rotate{
+    0%{ transform: rotate(0deg); }
+    25%{ transform: rotate(3deg); }
+    50%{ transform: rotate(-3deg); }
+    75%{ transform: rotate(1deg); }
+    100%{ transform: rotate(0deg); }
+}
+           #team{
+               position: relative;
+               top:70%;
+           }
+           
+           <!--header-->
+         #home  .container{
+               position: relative;
+               left:20%;
+               bottom: 80%;
+               margin-top: 20%;
+           }
+          #home .headreimg1{
+                height: 90%;
+                position: relative;
+                top:20%;
+                left: 26%;
+                
+               
+                
+                
+            }
+            #home .headerpar{
+                position: relative;
+                top: 40%;
+                left:15%;
+                
+               
+                
+            }
+          <!--header*-->
+           
+           
+           <!--stats-->
+           #statistique  .card {
+    background-color: #fff;
+    border-radius: 10px;
+    border: none;
+    position: relative;
+    margin-bottom: 30px;
+    box-shadow: 0 0.46875rem 2.1875rem rgba(90,97,105,0.1), 0 0.9375rem 1.40625rem rgba(90,97,105,0.1), 0 0.25rem 0.53125rem rgba(90,97,105,0.12), 0 0.125rem 0.1875rem rgba(90,97,105,0.1);
+}
+#statistique .l-bg-cherry {
+    background: linear-gradient(to right, #493240, #f09) !important;
+    color: #fff;
+}
+
+#statistique .l-bg-blue-dark {
+    background: linear-gradient(to right, #373b44, #4286f4) !important;
+    color: #fff;
+}
+
+#statistique .l-bg-green-dark {
+    background: linear-gradient(to right, #0a504a, #38ef7d) !important;
+    color: #fff;
+}
+
+#statistique .l-bg-orange-dark {
+    background: linear-gradient(to right, #a86008, #ffba56) !important;
+    color: #fff;
+}
+
+#statistique .card .card-statistic-3 .card-icon-large .fas, .card .card-statistic-3 .card-icon-large .far, .card .card-statistic-3 .card-icon-large .fab, .card .card-statistic-3 .card-icon-large .fal {
+    font-size: 110px;
+}
+
+#statistique .card .card-statistic-3 .card-icon {
+    text-align: center;
+    line-height: 50px;
+    margin-left: 15px;
+    color: #000;
+    position: absolute;
+    right: -5px;
+    top: 20px;
+    opacity: 0.1;
+}
+
+#statistique .l-bg-cyan {
+    background: linear-gradient(135deg, #289cf5, #84c0ec) !important;
+    color: #fff;
+}
+
+#statistique .l-bg-green {
+    background: linear-gradient(135deg, #23bdb8 0%, #43e794 100%) !important;
+    color: #fff;
+}
+
+#statistique .l-bg-orange {
+    background: linear-gradient(to right, #f9900e, #ffba56) !important;
+    color: #fff;
+}
+
+#statistique .l-bg-cyan {
+    background: linear-gradient(135deg, #289cf5, #84c0ec) !important;
+    color: #fff;
+}
+          #statistique  .card{
+                width: 120%;
+            }
+          #statistique  .neonText {
+  animation: flicker 1.5s infinite alternate;
+  color: #fff;
+}
+
+
+
+/* Flickering animation */
+@keyframes flicker {
+    
+  0%, 18%, 22%, 25%, 53%, 57%, 100% {
+
+      text-shadow:
+      0 0 4px #fff,
+      0 0 11px #fff,
+      0 0 19px #fff,
+      0 0 40px #0fa,
+      0 0 80px #0fa,
+      0 0 90px #0fa,
+      0 0 100px #0fa,
+      0 0 150px #0fa;
+  
+  }
+  
+  20%, 24%, 55% {        
+      text-shadow: none;
+  }    
+}
+          #statistique  .stat{
+                position: relative;
+                top:20%;
+            }
+          #statistique  .titreStat{
+                position: relative;
+                left:45%;
+                top:10%;
+            }
+         #statistique .container{
+               position: relative;
+               left: 0%;
+               top:100px;
+           }
+           <!--stats*-->
+           <!--product-->
+           .header {
+    margin-bottom: 50px;
+}
+
+ .header h3 {
+    font-size: 1rem;
+    color: #fe302f;
+    font-weight: 500;
+}
+
+ .header h2 {
+    font-size: 2.2rem;
+    font-weight: 400;
+    color: #444444; 
+}
+
+ .single-product {
+    margin-bottom: 26px;
+}
+
+ .single-product .part-1 {
+    position: relative;
+    height: 290px;
+    max-height: 290px;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+ .single-product .part-1::before {
+		position: absolute;
+		content: "";
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: -1;
+		transition: all 0.3s;
+}
+
+ .single-product:hover .part-1::before {
+		transform: scale(1.2,1.2) rotate(5deg);
+}
+
+ #product-1 .part-1::before {
+    background: url("/images/accueil2/produit1.png") no-repeat center;
+    background-size: cover;
+		transition: all 0.3s;
+}
+
+ #product-2 .part-1::before {
+    background: url("/images/accueil2/produit2.png") no-repeat center;
+    background-size: cover;
+}
+
+ #product-3 .part-1::before {
+    background: url("/images/accueil2/produit3.png") no-repeat center;
+    background-size: cover;
+}
+
+ #product-4 .part-1::before {
+    background: url("/images/accueil2/produit4.png") no-repeat center;
+    background-size: cover;
+}
+
+ .single-product .part-1 .discount,
+ .single-product .part-1 .new {
+    position: absolute;
+    top: 15px;
+    left: 20px;
+    color: #ffffff;
+    background-color: #fe302f;
+    padding: 2px 8px;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+}
+
+ .single-product .part-1 .new {
+    left: 0;
+    background-color: #444444;
+}
+ .single-product .part-2 .product-title {
+    font-size: 1rem;
+}
+
+ .single-product .part-2 h4 {
+    display: inline-block;
+    font-size: 1rem;
+}
+
+ .single-product .part-2 .product-old-price {
+    position: relative;
+    padding: 0 7px;
+    margin-right: 2px;
+    opacity: 0.6;
+}
+
+ .single-product .part-2 .product-old-price::after {
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #444444;
+    transform: translateY(-50%);
+    
+}
+             .single-product .part-2 .natural{
+                
+                opacity: 0.6;
+            }
+     .carousel-indicators{
+         position: relative;
+         top: 103%
+         
+         
+     }
+     .controls-top{
+         position: relative;
+         left: 47%
+     }
+     .container{
+         position: relative;
+         top: 30%;
+         left: 4%
+     }
+     .producttitle{
+         position: relative;
+         left: 39%;
+         padding-bottom: 3%;
+         
+     }
+     .plus{
+         position: absolute;
+         left: 47%;
+         top: 115%;
+         
+     }
+     .more{
+         position: absolute;
+         left: 44%;
+         top: 108%
+     }
+           
+           
+          
+       
+        </style>
+    </head>
+    <body scroll="no" style="overflow-x: hidden">
+        <!--navbar-->
+      <nav id="mynav" class="navbar navbar-expand-lg fixed-top " >
+          <a class="navbar-brand" href="#">Bio Beauty</a>
+           <ul class="navbar-nav mr-auto ">
+      <li class="nav-item active">
+        <a class="nav-link" href="#home">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#statistique">Statistique</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#team">Team</a>
+               </li>
+          <li class="nav-item">
+        <a class="nav-link" href="#contact">Contact</a>
+      </li>
+               <li class="nav-item">
+        <a class="nav-link" href="/users/login"> Connecter</a>
+      </li>
+
+	  <li class="nav-item">
+        <a class="nav-link" href="/users/signup"> Inscription</a>
+      </li>
+               
+      
+      
+    </ul>
+          
+        </nav>
+        <!--header-->
+        <div id="home">
+        <div class="container" >
+        <div class="row" >
+            <div class=" col-md-4">
+              <div class="headerpar">  
+		<h2 style="font-family: Proxima Nova;font-size: 50px;">All Natural  Acne Cream.</h2>
+		<p style="font-family: Proxima Nova;font-size: 20px;" >A healthier you from the inside out.We've sourced<br/> the cleanest ingredients to create a line of clean skin.</p> </div> 
+		  </div>
+            
+             <div class="col-md-8">
+                 <img class="headreimg1" src="/images/accueil2/haeder.png">
+           
+                 
+            </div>
+            
+        </div>
+        </div>
+            </div>
+        <!--header*-->
+        
+        <!--stats-->
+        <div id="statistique">
+        <div  class="container">
+<div class="titreStat">
+    <h1>statistique</h1>
+</div>
+
+<div class="stat col-md-12 d-flex justify-content-center ">
+    <div class="row ">
+        <div class="col-xl-3  col-lg-6" >
+            <div class="card l-bg-cherry" >
+                <div class="card-statistic-3 p-4">
+                    <div class="card-icon card-icon-large"><i class="fas fa-shopping-cart"></i></div>
+                    <div class="mb-4">
+                        <h5 class="neonText card-title mb-0">New Orders</h5>
+                    </div>
+                    <div class="row align-items-center mb-2 d-flex">
+                        <div class="col-8">
+                            <h2 class="d-flex align-items-center mb-0 neonText">
+                                3,243
+                            </h2>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-3 col-lg-6">
+            <div class="card l-bg-blue-dark">
+                <div class="card-statistic-3 p-4">
+                    <div class="card-icon card-icon-large"><i class="fas fa-users"></i></div>
+                    <div class="mb-4">
+                        <h5 class="neonText card-title mb-0">Customers</h5>
+                    </div>
+                    <div class="row align-items-center mb-2 d-flex">
+                        <div class="col-8">
+                            <h2 class="neonText d-flex align-items-center mb-0">
+                                15.07k
+                            </h2>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-3  col-lg-6">
+            <div class="card l-bg-green-dark">
+                <div class="card-statistic-3 p-4">
+                    <div class="card-icon card-icon-large"><i class="fas fa-ticket-alt"></i></div>
+                    <div class="mb-4">
+                        <h5 class="neonText card-title mb-0">Ticket Resolved</h5>
+                    </div>
+                    <div class="row align-items-center mb-2 d-flex">
+                        <div class="col-8">
+                            <h2 class="neonText d-flex align-items-center mb-0">
+                                578
+                            </h2>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-3 col-lg-6">
+            <div class="card l-bg-orange-dark">
+                <div class="card-statistic-3 p-4">
+                    <div class="card-icon card-icon-large"><i class="fas fa-dollar-sign"></i></div>
+                    <div class="mb-4">
+                        <h5 class="neonText card-title mb-0">Revenue Today</h5>
+                    </div>
+                    <div class="row align-items-center mb-2 d-flex">
+                        <div class="col-8">
+                            <h2 class="neonText d-flex align-items-center mb-0">
+                                $11.61k
+                            </h2>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    </div>
+            </div>
+<!--stats*-->
+        <div class="container my-4">
+     <h2 class="producttitle">our products</h2> 
+
+<!--Carousel Wrapper-->
+<div id="multi-item-example" class="carousel slide carousel-multi-item" data-ride="carousel">
+
+  <!--Controls-->
+  <div class="controls-top">
+    <a class="btn-floating" href="#multi-item-example" data-slide="prev"><i class="fas fa-chevron-left" style="color: green"></i></a>
+    <a class="btn-floating" href="#multi-item-example" data-slide="next"><i class="fas fa-chevron-right" style="color: green"></i></a>
+  </div>
+  <!--/.Controls-->
+
+  <!--Indicators-->
+  <ol class="carousel-indicators">
+    <li data-target="#multi-item-example" data-slide-to="0" class="active" style="background-color: green"></li>
+    <li data-target="#multi-item-example" data-slide-to="1" style="background-color: green"></li>
+    
+  </ol>
+  <!--/.Indicators-->
+
+  <!--Slides-->
+  <div class="carousel-inner" role="listbox">
+
+    <!--First slide-->
+    <div class="carousel-item active">
+
+      <div class="col-md-3" style="float:left">
+       <div id="product-2" class="single-product">
+										<div class="part-1">
+												<span class="discount">15% off</span>
+												
+										</div>
+										<div class="part-2">
+												<h3 class="product-title">Here Product Title</h3>
+                                            <h4 class="natural" >All Natural Ingredients.</h4><br/>
+												<h4 class="product-price">$49.99</h4>
+                                            <div class="d-grid">
+                  <button class="btn btn-outline-dark"  type="submit"><i class="fas fa-shopping-cart"></i><a href="/users/login">Ajouter au panier</a> </button>
+                  
+                </div>
+										</div>
+								</div>
+      </div>
+
+      <div class="col-md-3" style="float:left">
+        <div id="product-1" class="single-product">
+										<div class="part-1">
+												
+										</div>
+										<div class="part-2">
+												<h3 class="product-title">Here Product Title</h3>
+                                            <h4 class="natural" >All Natural Ingredients.</h4><br/>
+												<h4 class="product-old-price">$79.99</h4>
+												<h4 class="product-price">$49.99</h4>
+                                            <div class="d-grid">
+                  <button class="btn btn-outline-dark"  type="submit"><i class="fas fa-shopping-cart"></i><a href="/users/login">Ajouter au panier</a> </button>
+                  
+                </div>
+										</div>
+								</div>
+      </div>
+
+      <div class="col-md-3" style="float:left">
+        <div id="product-3" class="single-product">
+										<div class="part-1">
+											
+										</div>
+										<div class="part-2">
+												<h3 class="product-title">Here Product Title</h3>
+                                            <h4 class="natural" >All Natural Ingredients.</h4><br/>
+												<h4 class="product-old-price">$79.99</h4>
+												<h4 class="product-price">$49.99</h4>
+                                            <div class="d-grid">
+                  <button class="btn btn-outline-dark"  type="submit"><i class="fas fa-shopping-cart"></i><a href="/users/login">Ajouter au panier</a> </button>
+                  
+                </div>
+										</div>
+								</div>
+      </div>
+      
+       <div class="col-md-3" style="float:left">
+       <div id="product-4" class="single-product">
+										<div class="part-1">
+												<span class="new">new</span>
+											
+										</div>
+										<div class="part-2">
+												<h3 class="product-title">Here Product Title</h3>
+                                            <h4 class="natural" >All Natural Ingredients.</h4><br/>
+												<h4 class="product-price">$49.99</h4>
+                                            <div class="d-grid">
+                  <button class="btn btn-outline-dark"  type="submit"><i class="fas fa-shopping-cart"></i><a href="/users/login">Ajouter au panier</a> </button>
+                  
+                </div>
+										</div>
+								</div>
+      </div>
+
+    </div>
+    <!--/.First slide-->
+
+    <!--Second slide-->
+    <div class="carousel-item ">
+
+      <div class="col-md-3" style="float:left">
+       <div id="product-2" class="single-product">
+										<div class="part-1">
+												<span class="discount">15% off</span>
+												
+										</div>
+										<div class="part-2">
+												<h3 class="product-title">Here Product Title</h3>
+                                            <h4 class="natural" >All Natural Ingredients.</h4><br/>
+												<h4 class="product-price">$49.99</h4>
+                                            <div class="d-grid">
+                  <button class="btn btn-outline-dark"  type="submit"><i class="fas fa-shopping-cart"></i><a href="/users/login">Ajouter au panier</a> </button>
+                  
+                </div>
+										</div>
+								</div>
+      </div>
+
+      <div class="col-md-3" style="float:left">
+        <div id="product-1" class="single-product">
+										<div class="part-1">
+												
+										</div>
+										<div class="part-2">
+												<h3 class="product-title">Here Product Title</h3>
+                                            <h4 class="natural" >All Natural Ingredients.</h4><br/>
+												<h4 class="product-old-price">$79.99</h4>
+												<h4 class="product-price">$49.99</h4>
+                                            <div class="d-grid">
+                  <button class="btn btn-outline-dark"  type="submit"><i class="fas fa-shopping-cart"></i><a href="/users/login">Ajouter au panier</a> </button>
+                  
+                </div>
+										</div>
+								</div>
+      </div>
+
+      <div class="col-md-3" style="float:left">
+        <div id="product-3" class="single-product">
+										<div class="part-1">
+											
+										</div>
+										<div class="part-2">
+												<h3 class="product-title">Here Product Title</h3>
+                                            <h4 class="natural" >All Natural Ingredients.</h4><br/>
+												<h4 class="product-old-price">$79.99</h4>
+												<h4 class="product-price">$49.99</h4>
+                                            <div class="d-grid">
+                  <button class="btn btn-outline-dark"  type="submit"><i class="fas fa-shopping-cart"></i><a href="/users/login">Ajouter au panier</a> </button>
+                  
+                </div>
+										</div>
+								</div>
+      </div>
+      
+       <div class="col-md-3" style="float:left">
+       <div id="product-4" class="single-product">
+										<div class="part-1">
+												<span class="new">new</span>
+											
+										</div>
+										<div class="part-2">
+												<h3 class="product-title">Here Product Title</h3>
+                                            <h4 class="natural" >All Natural Ingredients.</h4><br/>
+												<h4 class="product-price">$49.99</h4>
+                                            <div class="d-grid">
+                  <button class="btn btn-outline-dark"  type="submit"><i class="fas fa-shopping-cart"></i><a href="/users/login">Ajouter au panier</a> </button>
+                  
+                </div>
+										</div>
+								</div>
+      </div>
+
+    </div>
+    <!--/.Second slide-->
+
+   
+
+  </div>
+  <!--/.Slides-->
+
+</div>
+<!--/.Carousel Wrapper-->
+    <h3 class="more">view more</h3>
+    <a class="btn-floating plus" href="#multi-item-example" data-slide="next"><i class="fas fa-plus-circle fa-3x"></i></a>
+    
+    </div>
+       <!--produit*-->
+        
+        <!--team-->
+        <div id="team" >
+    <html >
+<head>
+	<meta charset="UTF-8">
+	<title>Profile Image hover effect</title>
+	
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+    
+
+
+ .img-wrapper
+{
+	width: 100%;
+	height: 100%;
+	position: relative;
+	overflow: hidden;
+}
+
+ .img-wrapper:before
+{
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 180%;
+	height: 100%;
+	width: 100%;
+	background: rgba(255,255,255,.3);
+	z-index: 1;
+	transform: skew(45deg);
+	transition: .5s;
+}
+
+ .img-wrapper:hover:before
+{
+	left: -180%;
+}
+
+ .img-wrapper img
+{
+	height: 100%;
+	width: 100%;
+	filter: grayscale(100%);
+	transition: 2s;
+}
+ .img-wrapper:hover img
+{
+	filter: grayscale(0%);
+	transform: scale(1.1);
+}
+
+ .img-wrapper h2
+{
+	background-color: cadetblue;
+	font-family: Poppins;
+	color: #fff;
+	text-align: center;
+	text-transform: uppercase;
+	margin: 0;
+	padding: 10px 0;
+	position: absolute;
+	bottom: 0;
+    left: 1%;
+	width: 100%;
+	transform: perspective(400px) rotateY(90deg);
+	transform-origin: right;
+	transition: 1s;
+}
+
+ .img-wrapper:hover h2
+{
+	transform: perspective(400px) rotateY(0deg);
+}
+
+ .img-wrapper ul
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	background: rgba(255,255,255,0);
+}
+
+ .img-wrapper ul li
+{
+	background: #333;
+	height: 40px;
+	width: 40px;
+	text-align: center;
+	line-height: 40px;
+	transform: perspective(800px) rotateY(90deg);
+	transition: .5s;
+	transform-origin: left;
+}
+
+ .img-wrapper:hover ul li
+{
+	transform: perspective(800px) rotateY(0deg);
+}
+
+.img-wrapper:hover ul li:nth-child(1)
+{
+	transition-delay: .2s;
+}
+
+ .img-wrapper:hover ul li:nth-child(2)
+{
+	transition-delay: .6s;
+}
+
+ .img-wrapper:hover ul li:nth-child(3)
+{
+	transition-delay: .8s;
+}
+
+ .img-wrapper:hover ul li:nth-child(4)
+{
+	transition-delay: 1s;
+}
+
+ .img-wrapper ul li a
+{
+	color: tomato;
+	background: rgba(255,255,255,0);
+}
+
+ .img-wrapper ul li i
+{
+	color: tomato;
+	background: rgba(255,255,255,0);
+}
+
+ .img-wrapper ul li i:hover
+{
+	color: #fff;
+	background: rgba(255,255,255,0);
+}
+         .container1{
+            height: 50%;
+            position: relative;
+            top: 80%
+            
+        }
+         .teamtitle{position: relative;
+            left: 47%;
+            top: -10%
+            
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="container1">
+        <h2 class="teamtitle">OUR TEAM</h2>
+    
+    <div class="row justify-content-md-center">
+        <div class="col-md-3 ">
+            
+		<div class="img-wrapper">
+			<img src="/images/Groupe_photo\young-beautiful-woman-looking-trendy-girl-in-casual-summer-clothes-positive-funny-model-winking.jpg" alt="Atul Prajapati">
+			<h2>Souhe Selmi</h2>
+			<ul>
+				<li><a href="https://github.com/atuljustano"><i class="fab fa-github"></i></a></li>
+				<li><a href="https://www.instagram.com/atulkprajapati2000/"><i class="fab fa-instagram"></i></a></li>
+				<li><a href="https://twitter.com/atuljustano"><i class="fab fa-twitter"></i></a></li>
+				<li><a href="https://www.youtube.com/channel/UCf-KfxuY8PZBSD_8RW2nYsw"><i class="fab fa-youtube"></i></a></li>
+			</ul>
+		</div>
+	
+        </div>
+        <div class="col-md-3">
+            
+		<div class="img-wrapper">
+			<img src="/images/Groupe_photo/young-caucasian-female-spending-time-at-the-amusement-park.jpg" alt="Atul Prajapati">
+			<h2>Azza ben kassem</h2>
+			<ul>
+				<li><a href="https://github.com/atuljustano"><i class="fab fa-github"></i></a></li>
+				<li><a href="https://www.instagram.com/atulkprajapati2000/"><i class="fab fa-instagram"></i></a></li>
+				<li><a href="https://twitter.com/atuljustano"><i class="fab fa-twitter"></i></a></li>
+				<li><a href="https://www.youtube.com/channel/UCf-KfxuY8PZBSD_8RW2nYsw"><i class="fab fa-youtube"></i></a></li>
+			</ul>
+		</div>
+	</div>
+        <div class="col-md-3">
+            
+		<div class="img-wrapper">
+			<img src="/images/Groupe_photo/chef.jpg" alt="Atul Prajapati">
+			<h2>Salem bel kadhi</h2>
+			<ul>
+				<li><a href="https://github.com/atuljustano"><i class="fab fa-github"></i></a></li>
+				<li><a href="https://www.instagram.com/atulkprajapati2000/"><i class="fab fa-instagram"></i></a></li>
+				<li><a href="https://twitter.com/atuljustano"><i class="fab fa-twitter"></i></a></li>
+				<li><a href="https://www.youtube.com/channel/UCf-KfxuY8PZBSD_8RW2nYsw"><i class="fab fa-youtube"></i></a></li>
+			</ul>
+		</div>
+	</div>
+        
+    </div>
+    
+	
+    
+     
+    </div>
+        </div>
+        
+	
+</body>
+</html>
+            </div>
+        
+        
+        <!--team*-->
+        <!--footer-->
+        
+        
+            <html>
+    <head>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+        <link rel="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+        <style>
+            footer {
+    background-color: #292c2f;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+    box-sizing: border-box;
+    width: 100%;
+    text-align: left;
+    font: bold 16px sans-serif;
+    padding: 55px 50px;
+    margin-top: 80px;
+    bottom: 0;
+    color: #fff
+}
+
+.footer-navigation h3 {
+    margin: 0;
+    font: normal 36px Cookie, cursive;
+    margin-bottom: 20px;
+    color: #fff
+}
+
+.footer-navigation h3 a {
+    text-decoration: none;
+    color: #fff
+}
+
+.footer-navigation h3 span {
+    color: #5383d3
+}
+
+.footer-navigation p.links a {
+    color: #fff;
+    text-decoration: none
+}
+
+.footer-navigation p.company-name {
+    color: #8f9296;
+    font-size: 14px;
+    font-weight: normal;
+    margin-top: 20px
+}
+
+@media (max-width:767px) {
+    .footer-contacts {
+        margin: 30px 0
+    }
+}
+
+.footer-contacts p {
+    display: inline-block;
+    color: #ffffff;
+    vertical-align: middle
+}
+
+.footer-contacts p a {
+    color: #5383d3;
+    text-decoration: none
+}
+
+.fa.footer-contacts-icon {
+    background-color: #33383b;
+    color: #fff;
+    font-size: 18px;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 38px;
+    margin: 10px 15px 10px 0
+}
+
+span.new-line-span {
+    display: block;
+    font-weight: normal;
+    display: block;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 2
+}
+
+.footer-about h4 {
+    display: block;
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 20px
+}
+
+.footer-about p {
+    line-height: 20px;
+    color: #92999f;
+    font-size: 13px;
+    font-weight: normal;
+    margin: 0
+}
+
+div.social-links {
+    margin-top: 20px;
+    color: #fff
+}
+
+.social-links a {
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    background-color: #33383b;
+    border-radius: 2px;
+    font-size: 20px;
+    color: #ffffff;
+    text-align: center;
+    line-height: 35px;
+    margin-right: 5px;
+    margin-bottom: 5px
+}
+
+.footer {
+    position: relative;
+    
+    top: 1018px;
+    
+}
+
+
+        </style>
+    </head>
+    <body>
+        <footer class="footer">
+    <div class="row">
+        <div class="col-sm-6 col-md-4 footer-navigation">
+            <h3><a href="#">Beo Beauty</a></h3>
+            <p class="links"><a href="#">Home</a><strong> · </strong><a href="#">Blog</a><strong> · </strong><a href="#">Pricing</a><strong> · </strong><a href="#">About</a><strong> · </strong><a href="#">Faq</a><strong> · </strong><a href="#">Contact</a></p>
+            <p class="company-name">BIOBEAUTY © 2021</p>
+        </div>
+        <div class="col-sm-6 col-md-4 footer-contacts">
+            <div><span class="fa fa-map-marker footer-contacts-icon"> </span>
+                <p><span class="new-line-span">21 Revolution Street</span>NY, USA</p>
+            </div>
+            <div><i class="fa fa-phone footer-contacts-icon"></i>
+                <p class="footer-center-info email text-left"> +1 9485045958</p>
+            </div>
+            <div><i class="fa fa-envelope footer-contacts-icon"></i>
+                <p> <a href="#" target="_blank">support@biobeauty.com</a></p>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+        <div class="col-md-4 footer-about">
+            <h4>About the company</h4>
+            <p>Bio Beauty</p>
+            <div class="social-links social-icons"><a href="#"><i class="fab fa-facebook"></i></a><a href="#"><i class="fab fa-twitter"></i></a><a href="#"><i class="fab fa-linkedin"></i></a><a href="#"><i class="fab fa-github"></i></a></div>
+        </div>
+    </div>
+</footer>
+    </body>
+</html>
+        <p id="contact" style="position:relative;margin-top:1000px;">
+        </p>
+         
+        <!--footer*-->
+
+    </body>
+</html>
+
+
+
+
+

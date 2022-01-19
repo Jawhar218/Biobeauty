@@ -1,0 +1,338 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+         
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.95.2/css/materialize.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.95.2/js/materialize.min.js"></script>
+        
+        
+        
+        
+  <script>
+        $(document).on("ready",function(){
+  $(".article").on("click",".card-action>button",function(e){
+    e.preventDefault();
+    var $article = $(this).closest(".article"),
+        title = $article.find(".product-title").html(),
+        price = parseFloat($article.data("price"));
+    
+    var $li = $('<li data-price="'+price+'"></li>');
+    $li.html(price+"€ - "+title).appendTo($("#cart>ul"));
+		computePrice();
+  });
+  $("#cart").on("click","li",function(){
+    var $this = $(this);
+		$this.addClass("removing").slideUp(function(){
+      $this.remove();
+			computePrice();    
+    });
+    
+  });
+  
+  //2 chiffres après virgule
+  $("#pay").on("click", function(){
+    var price = $(this).data("total");
+    if (price == undefined){
+      price=0.00;
+    }
+    alert("Votre commande est de "+price.toFixed(2)+"€ !");
+  });
+  
+  function computePrice(){
+    var totalPrice = 0;
+    $("#cart li").each(function(key,val){
+      var $product = $(val)
+      totalPrice += $product.data("price");
+    });
+    /*if (totalPrice == undefined){
+      totalPrice=0;
+    }*/    		
+    	$("#pay").data("total",totalPrice).children(".total").html(totalPrice.toFixed(2));
+  };
+  
+  
+  
+});
+    </script>
+  
+        <style>
+          
+   
+ body{
+                background: #EEF2F4 !important;
+               
+            }
+            a {
+              text-decoration: none;
+              color: white;
+            }
+           
+
+.section-products {
+   
+    position: relative;
+    right: 10%;
+    top:5%;
+    
+    
+}
+
+.section-products .header {
+    margin-bottom: 50px;
+}
+
+.section-products .header h3 {
+    font-size: 1rem;
+    color: #fe302f;
+    font-weight: 500;
+}
+
+.section-products .header h2 {
+    font-size: 2.2rem;
+    font-weight: 400;
+    color: #444444; 
+}
+
+.section-products .single-product {
+    margin-bottom: 26px;
+}
+
+.section-products .single-product .part-1 {
+    position: relative;
+    height: 290px;
+    max-height: 290px;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.section-products .single-product .part-1::before {
+		position: absolute;
+		content: "";
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: -1;
+		transition: all 0.3s;
+}
+
+.section-products .single-product:hover .part-1::before {
+		transform: scale(1.2,1.2) rotate(5deg);
+}
+
+.section-products #product-1 .part-1::before {
+    background: url("produit1.png") no-repeat center;
+    background-size: cover;
+		transition: all 0.3s;
+}
+
+.section-products #product-2 .part-1::before {
+    background: url("produit2.png") no-repeat center;
+    background-size: cover;
+}
+
+.section-products #product-3 .part-1::before {
+    background: url("produit3.png") no-repeat center;
+    background-size: cover;
+}
+
+.section-products #product-4 .part-1::before {
+    background: url("produit4.png") no-repeat center;
+    background-size: cover;
+}
+
+
+.section-products .single-product .part-1 .discount,
+.section-products .single-product .part-1 .new {
+    position: absolute;
+    top: 15px;
+    left: 20px;
+    color: #ffffff;
+    background-color: #fe302f;
+    padding: 2px 8px;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+}
+
+.section-products .single-product .part-1 .new {
+    left: 0;
+    background-color: #444444;
+}
+.section-products .single-product .part-2 .product-title {
+    font-size: 1rem;
+}
+
+.section-products .single-product .part-2 h4 {
+    display: inline-block;
+    font-size: 1rem;
+}
+
+.section-products .single-product .part-2 .product-old-price {
+    position: relative;
+    padding: 0 7px;
+    margin-right: 2px;
+    opacity: 0.6;
+}
+
+.section-products .single-product .part-2 .product-old-price::after {
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #444444;
+    transform: translateY(-50%);
+    
+}
+            .section-products .single-product .part-2 .natural{
+                
+                opacity: 0.6;
+            }
+            
+            #commande{
+                position: relative;
+            left:3%;
+            top: -12%;}
+            #logout{
+                position: relative;
+            left: 60%;
+            top: -12%;}
+#cart{
+  position: relative;
+  float: left;
+  width: 30%;
+  height: 100%;
+  margin: 0;
+  padding: 0 0 60px;
+  overflow: hidden;
+}
+#cart>ul{
+  position: relative;
+  height: 100%;
+  margin: 0;
+  overflow-y: auto;
+}
+#cart>ul>li{
+  background-color: white;
+  padding:8px;
+  margin: 1px 0 0;
+  cursor: pointer;
+  overflow: hidden;
+}
+#cart>ul>li:not(.removing):hover:after{
+  position: absolute;
+  content: "x";
+  right: 0;
+  color: white;
+  background-color: #f44336;
+  height: 24px;
+  width: 24px;
+  text-align: center;
+  border-radius: 12px;
+  margin-right: 6px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 5px 0px;
+}
+
+
+#pay{
+  position: absolute;
+  display: block;
+  height: 60px;
+  line-height:60px;
+  width: 100%;
+  bottom: 0;
+  cursor: pointer;
+  text-align: center;
+}
+            
+            .produit{
+                
+  position: relative;
+                left: 30%;
+
+  width: 80%;
+  height: 100%;
+  overflow-y: auto;
+   overflow-x: hidden;             
+}
+            h6{
+                position: relative;
+                top: -10%;
+                left: 20%;
+            }
+            .chariot{
+                position: relative;
+                top: -90%;
+                left: -40%;
+            }
+
+        </style>
+    </head>
+    <body scroll="no" style="overflow-x : hidden;overflow-y: hidden">
+        <div class="produit">
+                <h1 style="position: relative;left: 30%;top: 3%; font-family:Ink Free;">Bio Beauty</h1>
+
+     
+                 
+        <button id="commande" class="btn btn-outline-dark"  type="submit"><a href="commande">Commande</a> <i class="fas fa-shopping-cart"></i></button>
+        <button id="logout" class="btn btn-outline-dark"  type="submit"><a href="logout">logout</a><i class="fas fa-sign-out-alt"></i></button>
+                  
+                
+ 
+        <section class="section-products" >
+		<div class="container ">
+				<div class="row justify-content-center   ">
+					
+				<div class="row ">
+						<!-- Single Product -->
+            <% products.forEach(function(product){ %>
+						<div class="col-md-6 col-lg-4 col-xl-3 article" data-price="<%= product.price %>">
+								<div id="product-1" class="single-product">
+										<div class="part-1" style="background: url('<%= product.image %>') no-repeat center;transition: all 0.3s;">
+												
+                      <% if (product.image){ %>
+                                               
+                        <% }%> 
+										</div>
+                                        
+										<div class="part-2" >
+                                           
+												                    <h3 class="product-title"><%= product.name %></h3>
+                                            <h4 class="natural" ><%= product.description %></h4><br/>
+												                    <h4 class="product-price"><%= product.price %></h4>
+                                            <div class="card-action d-grid">
+                  <button  class="btn btn-outline-dark"  type="submit"><h6>Ajouter au panier</h6><i  class="chariot fas fa-shopping-cart"></i></button>
+                  
+                </div>
+                
+
+                
+                    
+										</div>
+								</div>
+						</div>
+            <%  }); %>
+						
+						
+                    </div>
+                    
+            </div>
+            </div>
+</section>
+            </div>
+     
+    <div id="cart" class="row" style="background-color: white;position: relative;left:0%;bottom: 99%;height: 100%;">
+  <ul>
+  </ul>
+  <form action="commande" method="post">
+    <a id="pay" class="waves-effect waves-light orange white-text" type="submit">Payer <span class="total">0.00</span>€</a>
+</form>
+</div>
+
+
+    </body>
+    
+</html>
